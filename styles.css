@@ -1,0 +1,90 @@
+body {
+font-family: 'Archivo Black', sans-serif;
+}
+
+h1 {
+    font-size: 38px;
+    color:antiquewhite;
+    max-width: 75%;
+    padding-top: 350px;
+    text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000; /* Outline color and thickness */
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Adjust as needed */
+    margin: 0 auto;
+    /* padding: 20px;*/
+}
+
+.hero {
+    position: relative;
+    height: 450px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.hero:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('media/MAX_0068.JPG'); /* Adjust path */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.85; /* Adjust opacity as desired */
+    z-index: -1; /* Send image to the background */
+}
+
+.form-container {
+    position: absolute;
+    bottom: 0;
+    right: 60px; /* Adjust the distance from the right edge */
+    width: calc(25% - 40px); /* Adjust width as needed */
+}
+
+.quote-form {
+    
+    width: 100%; /* Make the form width 100% of its container */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust background color and opacity */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.intro {
+    max-width: 50%;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    width: 16.66%; /* Adjust width to fit all slides on screen */
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.active {
+    transform: scale(1.1); /* Enlarge active slide */
+    z-index: 1; /* Ensure active slide is on top of others */
+}
+

@@ -5,50 +5,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <title>Flyin Kepi Drone Services</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="hero"></div>
-        <div class="form">
-            <form action="submit_quote.php" method="post">
-                <label for="name">Your Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
-        
-                <label for="email">Your Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-        
-                <label for="phone">Your Phone:</label><br>
-                <input type="tel" id="phone" name="phone" required><br><br>
-        
-                <label for="service">Service Needed:</label><br>
-                <select id="service" name="service" required>
-                    <option value="">Please select</option>
-                    <option value="Web Design">Web Design</option>
-                    <option value="Graphic Design">Graphic Design</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="Other">Other</option>
-                </select><br><br>
-        
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br><br>
-        
-                <input type="submit" value="Submit">
+        <div class="hero">
+            <h1>Flying Kepi Drone Services Are Here For You!</h1>
         </div>
-        <div class="intro">Vid goes here.</div>
+    </div>
+    <div class="form-container">
+        <form action="submit_quote.php" method="post" class="quote-form">
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Your Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Your Phone:</label><br>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="company">Company:</label><br>
+            <input type="text" id="company" name="company"><br><br>
+
+            <label for="message">Message & Project Description:</label><br>
+            <textarea id="message" name="message" rows="6" required></textarea><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="intro">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula et purus id fermentum. Aliquam
+            erat volutpat. Pellentesque venenatis sapien eget tortor placerat consectetur. Interdum et malesuada fames
+            ac ante ipsum primis in faucibus. Phasellus venenatis interdum lorem, at luctus eros finibus et. Aliquam
+            eget ex vel enim interdum hendrerit. Donec dignissim dui mi, finibus vehicula purus ultrices a. Mauris
+            iaculis ex a arcu egestas malesuada. Donec id velit tellus. Aliquam tempus, nunc a aliquam tincidunt, neque
+            enim tempus nunc, a convallis purus magna in massa. Phasellus facilisis ligula quis leo consequat pharetra.
+            Sed nec pharetra elit.</p>
     </div>
 
     <div class="container">
-        <div class="img-carosel"></div>
+        <div class="carousel">
+            <div class="slides">
+                <div class="slide">
+                    <img src="media/carousel/IMG_E8468.JPG" alt="Image 1">
+                </div>
+                <div class="slide">
+                    <img src="media/carousel/MAX_0052.JPG" alt="Image 2">
+                </div>
+                <div class="slide">
+                    <img src="media/carousel/MAX_0065.JPG" alt="Image 3">
+                </div>
+                <div class="slide">
+                    <img src="media/carousel/MAX_0171.JPG">
+                </div>
+                <div class="slide">
+                    <img src="media/carousel/MAX_0222.JPG">
+                </div>
+                <div class="slide">
+                    <img src="media/carousel/MAX_0257.JPG">
+                </div>
+            </div>
+        </div>
+
         <div class="specialties"></div>
     </div>
-
-    <div>
-        <footer>
-            <h4>Flyin Kepi LLC. © 2024</h4>
-        </footer>
     </div>
+
+    <footer>
+        <h4>Flyin Kepi LLC. © 2024</h4>
+    </footer>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const slideWidth = slides.clientWidth;
+        let slideIndex = 0;
+
+        function nextSlide() {
+            if (slideIndex === slides.children.length - 1) {
+                slideIndex = 0;
+            } else {
+                slideIndex++;
+            }
+            updateSlidePosition();
+        }
+
+        function updateSlidePosition() {
+            slides.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+        }
+
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds (adjust as needed)
+
+    </script>
 </body>
 
 </html>
