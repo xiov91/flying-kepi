@@ -62,29 +62,57 @@ h1 {
     max-width: 50%;
 }
 
-.carousel {
-    width: 100%;
-    overflow: hidden;
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
     position: relative;
-}
-
-.slides {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.slide {
-    width: 16.66%; /* Adjust width to fit all slides on screen */
-    flex-shrink: 0;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;
-}
-
-.active {
-    transform: scale(1.1); /* Enlarge active slide */
-    z-index: 1; /* Ensure active slide is on top of others */
-}
-
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Active slide */
+  .active {
+    display: block;
+    width: 60%; /* Adjust width as needed */
+    position: absolute;
+    left: 20%; /* Adjust positioning as needed */
+    z-index: 1;
+    animation-name: enlarge;
+    animation-duration: 1.5s;
+  }
+  
+  /* Other slides */
+  .mySlides:not(.active) {
+    display: inline-block;
+    width: 20%; /* Adjust width as needed */
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes enlarge {
+    from {transform: scale(0.9);}
+    to {transform: scale(1);}
+  }
+  

@@ -47,31 +47,53 @@
             Sed nec pharetra elit.</p>
     </div>
 
-    <div class="container">
-        <div class="carousel">
-            <div class="slides">
-                <div class="slide">
-                    <img src="media/carousel/IMG_E8468.JPG" alt="Image 1">
-                </div>
-                <div class="slide">
-                    <img src="media/carousel/MAX_0052.JPG" alt="Image 2">
-                </div>
-                <div class="slide">
-                    <img src="media/carousel/MAX_0065.JPG" alt="Image 3">
-                </div>
-                <div class="slide">
-                    <img src="media/carousel/MAX_0171.JPG">
-                </div>
-                <div class="slide">
-                    <img src="media/carousel/MAX_0222.JPG">
-                </div>
-                <div class="slide">
-                    <img src="media/carousel/MAX_0257.JPG">
-                </div>
-            </div>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <img src="media/carousel/IMG_E8468.JPG" style="width:50%">
+            <div class="text">Caption Text</div>
         </div>
 
-        <div class="specialties"></div>
+        <div class="mySlides fade">
+            <img src="media/carousel/MAX_0052.JPG" style="width:50%">
+            <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="media/carousel/MAX_0065.JPG" style="width:50%">
+            <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="media/carousel/MAX_0171.JPG" style="width:50%">
+            <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="media/carousel/MAX_0222.JPG" style="width:50%">
+            <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="media/carousel/MAX_0257.JPG" style="width: 50%">
+            <div class="text">Caption Three</div>
+        </div>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+
+    <div class="specialties"></div>
     </div>
     </div>
 
@@ -79,27 +101,7 @@
         <h4>Flyin Kepi LLC. © 2024</h4>
     </footer>
 
-    <script>
-        const slides = document.querySelector('.slides');
-        const slideWidth = slides.clientWidth;
-        let slideIndex = 0;
-
-        function nextSlide() {
-            if (slideIndex === slides.children.length - 1) {
-                slideIndex = 0;
-            } else {
-                slideIndex++;
-            }
-            updateSlidePosition();
-        }
-
-        function updateSlidePosition() {
-            slides.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
-        }
-
-        setInterval(nextSlide, 3000); // Change slide every 3 seconds (adjust as needed)
-
-    </script>
+    <script src="myscripts.js"></script>
 </body>
 
 </html>
