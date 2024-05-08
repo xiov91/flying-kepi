@@ -1,107 +1,70 @@
+HTML
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-    <title>Flyin Kepi Drone Services</title>
-</head>
-
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+            <link rel="stylesheet" href="styles.css"> 
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> 
+        
+            <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+            <script src="myscripts.js"></script>
+        
+            <title>Flyin Kepi Drone Services</title>
+        </head>
+        
 <body>
-    <div class="container">
-        <div class="hero">
-            <h1>Flying Kepi Drone Services Are Here For You!</h1>
+    <header>
+        <div class="logo">
+            <img src="flying-kepi-logo.png" alt="Flying Kepi LLC">
         </div>
-    </div>
-    <div class="form-container">
-        <form action="submit_quote.php" method="post" class="quote-form">
-            <label for="name">Your Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <label for="email">Your Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Flying Kepi LLC: Your Eye in the Sky</h1>
+            <p>Professional drone services for all your aerial needs.</p> 
+            <button>Get a Quote</button> 
+        </div>
+        <div id="image-carousel">
+            <div class="item"><img src="media/carousel/IMG_E8468.JPG" alt="Image Description"></div>
+            <div class="item"><img src="media/carousel/MAX_0052.JPG" alt="Image Description"></div>
+            <div class="item"><img src="media/carousel/MAX_0065.JPG" alt="Image Description"></div>
+            <div class="item"><img src="media/carousel/MAX_0171.JPG" alt="Image Description"></div>
+            <div class="item"><img src="media/carousel/MAX_0222.JPG" alt="Image Description"></div>
+            <div class="item"><img src="media/carousel/MAX_0257.JPG" alt="Image Description"></div>
+            </div>
+    </section>
 
-            <label for="phone">Your Phone:</label><br>
-            <input type="tel" id="phone" name="phone" required><br><br>
-
-            <label for="company">Company:</label><br>
-            <input type="text" id="company" name="company"><br><br>
-
-            <label for="message">Message & Project Description:</label><br>
-            <textarea id="message" name="message" rows="6" required></textarea><br><br>
-
-            <input type="submit" value="Submit">
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Phone Number">
+            <input type="text" name="company" placeholder="Company (Optional)">
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
         </form>
-    </div>
-    <div class="intro">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula et purus id fermentum. Aliquam
-            erat volutpat. Pellentesque venenatis sapien eget tortor placerat consectetur. Interdum et malesuada fames
-            ac ante ipsum primis in faucibus. Phasellus venenatis interdum lorem, at luctus eros finibus et. Aliquam
-            eget ex vel enim interdum hendrerit. Donec dignissim dui mi, finibus vehicula purus ultrices a. Mauris
-            iaculis ex a arcu egestas malesuada. Donec id velit tellus. Aliquam tempus, nunc a aliquam tincidunt, neque
-            enim tempus nunc, a convallis purus magna in massa. Phasellus facilisis ligula quis leo consequat pharetra.
-            Sed nec pharetra elit.</p>
-    </div>
-
-    <!-- Slideshow container -->
-    <div class="slideshow-container">
-
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-            <img src="media/carousel/IMG_E8468.JPG" style="width:50%">
-            <div class="text">Caption Text</div>
-        </div>
-
-        <div class="mySlides fade">
-            <img src="media/carousel/MAX_0052.JPG" style="width:50%">
-            <div class="text">Caption Two</div>
-        </div>
-
-        <div class="mySlides fade">
-            <img src="media/carousel/MAX_0065.JPG" style="width:50%">
-            <div class="text">Caption Three</div>
-        </div>
-
-        <div class="mySlides fade">
-            <img src="media/carousel/MAX_0171.JPG" style="width:50%">
-            <div class="text">Caption Three</div>
-        </div>
-
-        <div class="mySlides fade">
-            <img src="media/carousel/MAX_0222.JPG" style="width:50%">
-            <div class="text">Caption Three</div>
-        </div>
-
-        <div class="mySlides fade">
-            <img src="media/carousel/MAX_0257.JPG" style="width: 50%">
-            <div class="text">Caption Three</div>
-        </div>
-    </div>
-    <br>
-
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-    </div>
-
-    <div class="specialties"></div>
-    </div>
-    </div>
+    </section>
 
     <footer>
         <h4>Flyin Kepi LLC. © 2024</h4>
-    </footer>
-
-    <script src="myscripts.js"></script>
+        </footer>
 </body>
 
 </html>

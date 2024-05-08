@@ -1,24 +1,21 @@
-let slideIndex = 0;
-showSlides();
+// Smooth Scrolling
+const navLinks = document.querySelectorAll('header nav a');
+navLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();      
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        targetSection.scrollIntoView({ behavior: 'smooth' });  
+    });
+});
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].classList.remove("active"); // Remove active class from all slides
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].classList.add("active"); // Add active class to current slide
-  setTimeout(showSlides, 5000); // Change image every 5 seconds
-}
+// Image Carousel (Owl Carousel)
+$(document).ready(function() {
+  $('#image-carousel').owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 3000, 
+    items: 1, 
+    nav: true,
+  });
+});
